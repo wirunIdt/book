@@ -3,89 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adverb Clause of Result - Manchester United Ultimate Edition</title>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Anuphan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Adverb Clause of Result - Manchester United Senior Light Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* 🟥 Premium Manchester United UI Palette */
-  --body-bg: #060608;       /* พื้นหลังดำคาร์บอนลึกสุดพรีเมียม */
-  --surface: #121216;       /* สีผิวหน้าการ์ดหลัก เข้มแต่มีมิติ */
-  --surface-glow: #1c1c24;  /* สีการ์ดเมื่อโดนไฮไลต์ */
-  --mu-red: #db0007;        /* สีแดงสโมสรแมนเชสเตอร์ ยูไนเต็ด */
-  --mu-red-glow: #ff1e27;   /* สีแดงนีออนสำหรับเอฟเฟกต์ */
-  --mu-gold: #c7a052;       /* สีทองแชมเปญ เสริมความพรีเมียม */
-  --text-primary: #ffffff;  /* ตัวอักษรหลัก ขาวเคลียร์ */
-  --text-muted: #9ca3af;    /* ตัวอักษรรอง เทาสบายตา */
-  --text-dark: #050505;     /* สำหรับข้อความบนพื้นสว่าง */
-  --border-line: #262630;   /* เส้นขอบบางเฉียบ */
+  /* 🟥 Senior-Friendly Light Manchester United UI Palette */
+  --body-bg: #f4f6f9;       /* พื้นหลังขาวเทาสว่าง สบายตา ไม่สะท้อนแสงจัด */
+  --surface: #ffffff;       /* พื้นผิวการ์ดสีขาวบริสุทธิ์ คอนทราสต์สูง */
+  --surface-glow: #e2e8f0;  /* พื้นหลังไฮไลต์เทาอ่อน */
+  --mu-red: #ba0005;        /* สีแดงแมนฯ ยูฯ ปรับให้เข้มขึ้นเพื่อให้อ่านบนพื้นขาวง่าย */
+  --mu-red-glow: #d60006;
+  --mu-gold: #96722b;       /* สีทองเข้ม ปรับเนื้อสีให้อ่านง่ายไม่กลืนกับพื้นสว่าง */
+  --text-primary: #111111;  /* ตัวอักษรสีดำเข้มสนิท เพื่อการอ่านที่ชัดเจนที่สุด */
+  --text-muted: #374151;    /* ตัวอักษรรองสีเทาเข้ม (ไม่ใช้เทาอ่อนเพื่อป้องกันสายตาเพ่ง) */
+  --border-line: #94a3b8;   /* เส้นขอบหนาและเข้มขึ้น มองเห็นขอบเขตชัดเจน */
   
-  --yellow-card: #eab308;   /* ใบเหลืองแจ้งเตือน */
-  --red-card: #ef4444;      /* ใบแดงจุดระวัง */
+  --yellow-card: #d97706;   /* สีใบเหลือง (ปรับเข้มขึ้น) */
+  --red-card: #dc2626;      /* สีใบแดง */
   
-  --radius-lg: 24px;       
-  --radius-md: 16px;
-  --radius-sm: 10px;
-  --shadow-main: 0 16px 48px rgba(0,0,0,0.6);
+  --radius-lg: 16px;       
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-main: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; background-color: var(--body-bg); }
 
 body {
-  font-family: 'Lexend', 'Anuphan', sans-serif;
+  font-family: 'Anuphan', 'Lexend', sans-serif;
   background: var(--body-bg);
   color: var(--text-primary);
-  font-size: 15px;
-  line-height: 1.7;
+  /* 👁️ ขยายขนาดตัวอักษรและระยะบรรทัดเพื่อผู้สูงอายุ */
+  font-size: 18px; 
+  line-height: 1.8;
   min-height: 100vh;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
-/* 👹 PURE CSS CARTOON MASCOT & STICKERS */
-/* มาสคอต Fred the Red ดุ๊กดิ๊ก หน้าสแปลช */
-.mascot-fred {
-  width: 90px; height: 90px; background: var(--mu-red); border-radius: 50%;
-  position: relative; border: 4px solid #fff; box-shadow: 0 8px 25px rgba(219,0,7,0.5);
-  margin-bottom: 16px; animation: bounceMascot 2s infinite ease-in-out;
+/* 🛡️ OFFICIAL MANCHESTER UNITED LOGO STYLING */
+.mu-official-logo {
+  width: 140px; height: 140px;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+  animation: logoPulse 3s infinite ease-in-out;
 }
-.mascot-fred::before, .mascot-fred::after {
-  content: ''; position: absolute; top: -12px; width: 0; height: 0;
-  border-left: 14px solid transparent; border-right: 14px solid transparent;
-  border-bottom: 22px solid var(--mu-red);
-}
-.mascot-fred::before { left: 8px; transform: rotate(-25deg); }
-.mascot-fred::after { right: 8px; transform: rotate(25deg); }
-.fred-eyes { position: absolute; top: 30px; width: 100%; display: flex; justify-content: space-around; padding: 0 18px; }
-.fred-eye { width: 14px; height: 14px; background: #fff; border-radius: 50%; position: relative; }
-.fred-eye::after { content: ''; position: absolute; width: 7px; height: 7px; background: #000; border-radius: 50%; top: 3px; left: 3px; }
-.fred-smile { width: 34px; height: 17px; border-bottom: 4px solid #fff; border-radius: 0 0 34px 34px; position: absolute; bottom: 18px; left: 28px; }
-
-/* สติกเกอร์ลูกบอลแมนยูน่ารักประดับตามการ์ด */
-.sticker-ball-mu {
-  display: inline-block; width: 28px; height: 28px; background: #fff; border: 2.5px solid #000; border-radius: 50%; position: relative; vertical-align: middle; margin-left: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); animation: spinBall 4s infinite linear;
-}
-.sticker-ball-mu::before {
-  content: ''; position: absolute; top: 4px; left: 4px; width: 14px; height: 14px; background: var(--mu-red); transform: rotate(45deg);
+.mu-logo-inline {
+  width: 38px; height: 38px;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
-/* ⚽ INTRO SPLASH SCREEN */
+/* ⚽ INTRO SPLASH SCREEN (LIGHT MODE) */
 #intro-screen {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(circle at center, #1e0002 0%, #060608 100%);
+  background: #ffffff;
   z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 24px; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 24px; transition: all 0.5s ease;
 }
-.intro-title { font-size: 34px; font-weight: 800; letter-spacing: -1px; margin: 16px 0 8px; text-transform: uppercase; text-align: center; }
-.intro-title span { color: var(--mu-red-glow); text-shadow: 0 0 15px var(--mu-red); }
-.intro-desc { color: var(--text-muted); font-size: 14px; max-width: 340px; text-align: center; margin-bottom: 32px; font-weight: 300; }
+.intro-title { font-size: 38px; font-weight: 800; margin: 24px 0 8px; text-transform: uppercase; text-align: center; color: #111; }
+.intro-title span { color: var(--mu-red); text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+.intro-desc { color: var(--text-muted); font-size: 18px; max-width: 450px; text-align: center; margin-bottom: 32px; font-weight: 500; }
 .intro-btn {
-  background: var(--mu-red); color: #fff; border: 2px solid var(--mu-gold); padding: 16px 40px;
-  font-size: 15px; font-weight: 700; border-radius: 30px; cursor: pointer; letter-spacing: 0.5px;
-  box-shadow: 0 0 25px rgba(219, 0, 7, 0.5); transition: all 0.3s;
+  background: var(--mu-red); color: #fff; border: 2px solid var(--mu-gold); padding: 18px 48px;
+  font-size: 18px; font-weight: 700; border-radius: 35px; cursor: pointer; letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(186, 0, 5, 0.3); transition: all 0.2s;
 }
-.intro-btn:hover { transform: scale(1.05); box-shadow: 0 0 35px rgba(219, 0, 7, 0.8); }
-#intro-screen.fade-out { opacity: 0; pointer-events: none; transform: translateY(-50px); }
+.intro-btn:hover { transform: scale(1.03); background: var(--mu-red-glow); }
+#intro-screen.fade-out { opacity: 0; pointer-events: none; transform: scale(1.05); }
 
 /* 📱💻 CORE HYBRID WRAPPER */
 .dynamic-layout-container {
@@ -95,130 +79,128 @@ body {
 /* BRANDING & IDENTITY */
 .header-identity { text-align: center; padding: 10px 0 0; }
 .main-badge {
-  display: inline-flex; align-items: center; gap: 6px; background: rgba(219, 0, 7, 0.15);
-  color: #ff4d52; border: 1px solid var(--mu-red); padding: 6px 14px; border-radius: 20px;
-  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  display: inline-block; background: #fee2e2;
+  color: var(--mu-red); border: 2px solid var(--mu-red); padding: 8px 16px; border-radius: 30px;
+  font-size: 14px; font-weight: 700; text-transform: uppercase;
 }
-.header-identity h1 { font-size: 26px; font-weight: 800; margin-top: 12px; letter-spacing: -0.5px; text-transform: uppercase; }
-.header-identity h1 em { font-style: normal; color: var(--mu-red); text-shadow: 0 0 10px rgba(219,0,7,0.3); }
+.header-identity h1 { font-size: 32px; font-weight: 800; margin-top: 16px; color: #111; text-transform: uppercase; }
+.header-identity h1 em { font-style: normal; color: var(--mu-red); }
 
 /* STICKY FLOATING NAVBAR */
 .floating-navbar {
   display: flex; justify-content: space-between; background: var(--surface);
-  border: 1px solid var(--border-line); padding: 6px; border-radius: 40px;
+  border: 2px solid var(--border-line); padding: 6px; border-radius: 40px;
   position: sticky; top: 16px; z-index: 100; box-shadow: var(--shadow-main);
 }
 .nav-item {
-  flex: 1; text-align: center; padding: 10px 0; font-size: 12px; font-weight: 600;
+  flex: 1; text-align: center; padding: 12px 0; font-size: 15px; font-weight: 700;
   color: var(--text-muted); text-decoration: none; border-radius: 30px; transition: all 0.2s;
 }
-.nav-item.active, .nav-item:hover { background: var(--surface-glow); color: var(--mu-red-glow); }
+.nav-item.active, .nav-item:hover { background: var(--mu-red); color: #ffffff; }
 
 /* โครงสร้างพื้นที่คอนเทนต์แยกฝั่ง PC / Mobile */
 .content-grid-system { display: flex; flex-direction: column; gap: 24px; }
 
 /* 🃏 UI CARD */
 .ui-card {
-  background: var(--surface); border: 1px solid var(--border-line);
-  border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-main);
-  height: fit-content; position: relative; overflow: hidden;
-}
-/* สติกเกอร์ลายเส้นสนามบอลจางๆ ซ่อนอยู่ข้างหลังเพื่อความสวยงาม */
-.ui-card::before {
-  content: ''; position: absolute; top: -40px; right: -40px; width: 120px; height: 120px;
-  border: 2px dashed rgba(255,255,255,0.02); border-radius: 50%; pointer-events: none;
+  background: var(--surface); border: 2px solid var(--border-line);
+  border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-main);
+  height: fit-content; position: relative;
 }
 
 .card-icon-header {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
-  border-bottom: 1px dashed var(--border-line); padding-bottom: 12px;
+  display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 14px;
 }
 .icon-wrapper {
-  width: 36px; height: 36px; background: rgba(219, 0, 7, 0.1);
+  width: 44px; height: 44px; background: #fee2e2;
   border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: var(--mu-red); border: 1px solid rgba(219,0,7,0.2);
+  font-size: 22px; color: var(--mu-red); border: 1px solid var(--mu-red);
 }
-.card-title { font-size: 17px; font-weight: 700; color: #ffffff; }
+.card-title { font-size: 20px; font-weight: 700; color: #111111; }
 
 /* 📖 RICH TEXT CONTENT STYLING */
-.deep-text-block { font-size: 14px; color: var(--text-muted); }
-.deep-text-block p { margin-bottom: 14px; }
-.deep-text-block strong { color: #fff; font-weight: 600; }
+.deep-text-block { font-size: 17px; color: var(--text-primary); }
+.deep-text-block p { margin-bottom: 16px; text-indent: 20px; }
+.deep-text-block p.no-indent { text-indent: 0; }
+.deep-text-block strong { color: #000000; font-weight: 700; background-color: #fef08a; padding: 0 4px; border-radius: 4px; }
 
 .section-divider {
-  margin: 18px 0 10px; font-size: 13px; font-weight: 700; text-transform: uppercase;
-  color: var(--mu-gold); display: flex; align-items: center; gap: 8px;
+  margin: 24px 0 14px; font-size: 16px; font-weight: 700; text-transform: uppercase;
+  color: var(--mu-red); display: flex; align-items: center; gap: 8px; border-bottom: 2px solid var(--mu-red); padding-bottom: 4px;
 }
-.section-divider::after { content: ''; flex: 1; height: 1px; background: var(--border-line); }
 
 .formula-box {
-  background: #09090c; border-left: 3px solid var(--mu-red);
-  padding: 14px; border-radius: var(--radius-sm); font-family: monospace;
-  font-size: 13px; color: #e2e8f0; margin: 10px 0; overflow-x: auto;
+  background: #f8fafc; border: 2px solid var(--border-line); border-left: 6px solid var(--mu-red);
+  padding: 16px; border-radius: var(--radius-sm); font-family: monospace;
+  font-size: 16px; font-weight: 700; color: #0f172a; margin: 14px 0; overflow-x: auto;
 }
+
+.bullet-list { margin-left: 24px; margin-bottom: 16px; list-style-type: disc; }
+.bullet-list li { margin-bottom: 8px; color: var(--text-primary); }
+
+/* SEGMENTED CONTROL FOR EXAMPLES */
+.segmented-control { display: flex; background: #e2e8f0; padding: 6px; border-radius: 14px; margin-bottom: 20px; border: 2px solid var(--border-line); }
+.segment-btn {
+  flex: 1; border: none; background: transparent; color: #334155;
+  padding: 12px 0; font-size: 15px; font-weight: 700; border-radius: 10px; cursor: pointer; transition: .2s;
+}
+.segment-btn.active { background: var(--surface); color: var(--mu-red); box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid var(--border-line); }
+
+.example-pool { display: none; flex-direction: column; gap: 16px; }
+.example-pool.active { display: flex; }
+.example-row { background: #f8fafc; padding: 18px; border-radius: var(--radius-md); border: 2px solid #e2e8f0; border-left: 5px solid var(--border-line); }
+.example-row.highlighted { border-left-color: var(--mu-red); background: #fff5f5; }
+.text-en { font-size: 18px; font-weight: 700; color: #000; }
+.text-en mark { background: #fee2e2; color: #b91c1c; padding: 2px 6px; border-radius: 4px; font-weight: 800; border: 1px dashed #f87171; }
+.text-th { font-size: 16px; color: var(--text-muted); margin-top: 6px; font-weight: 500; }
+.label-tag { font-size: 12px; background: #e2e8f0; color: #1e293b; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 8px; font-family: monospace; font-weight: 700; }
 
 /* INTERACTIVE ACCORDION LIST */
 .accordion-node {
-  background: var(--surface-glow); border: 1px solid var(--border-line);
-  border-radius: var(--radius-md); padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+  background: #f8fafc; border: 2px solid var(--border-line);
+  border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 12px; cursor: pointer;
 }
-.accordion-head { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 14px; }
-.accordion-body { font-size: 13px; color: var(--text-muted); margin-top: 10px; display: none; padding-top: 10px; border-top: 1px dashed var(--border-line); }
-.accordion-body.open { display: block; animation: smoothReveal 0.3s ease; }
+.accordion-head { display: flex; justify-content: space-between; align-items: center; font-weight: 700; font-size: 17px; color: #111; }
+.accordion-body { font-size: 16px; color: var(--text-muted); margin-top: 12px; display: none; padding-top: 12px; border-top: 2px dashed #cbd5e1; }
+.accordion-body.open { display: block; }
 
-/* SEGMENTED CONTROL FOR EXAMPLES */
-.segmented-control { display: flex; background: #09090c; padding: 4px; border-radius: 12px; margin-bottom: 18px; border: 1px solid var(--border-line); }
-.segment-btn {
-  flex: 1; border: none; background: transparent; color: var(--text-muted);
-  padding: 10px 0; font-size: 12px; font-weight: 700; border-radius: 8px; cursor: pointer; transition: .2s;
-}
-.segment-btn.active { background: var(--surface); color: var(--mu-red-glow); box-shadow: var(--shadow-main); }
+/* 🛡️ SYSTEM QUIZ DESIGN (ขยายขนาดสำหรับผู้สูงอายุ) */
+.quiz-wrapper { background: #ffffff; border: 3px solid #111111; }
+.quiz-header-status { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: var(--mu-gold); text-transform: uppercase; }
+.bar-track { height: 10px; background: #e2e8f0; border-radius: 5px; margin: 10px 0 20px; overflow: hidden; border: 1px solid var(--border-line); }
+.bar-advance { height: 100%; background: var(--mu-red); width: 4%; transition: .3s; }
+.question-title { font-size: 19px; font-weight: 700; margin-bottom: 20px; color: #000000; line-height: 1.6; background: #f1f5f9; padding: 12px; border-radius: 8px; }
 
-.example-pool { display: none; flex-direction: column; gap: 14px; }
-.example-pool.active { display: flex; }
-.example-row { background: var(--surface-glow); padding: 14px; border-radius: var(--radius-md); border-right: 3px solid var(--border-line); }
-.example-row.highlighted { border-right-color: var(--mu-red); }
-.text-en { font-size: 14.5px; font-weight: 700; color: #fff; }
-.text-en mark { background: rgba(219, 0, 7, 0.25); color: #ff6b70; padding: 1px 4px; border-radius: 4px; }
-.text-th { font-size: 12.5px; color: var(--text-muted); margin-top: 4px; }
-.label-tag { font-size: 10px; background: #1e1e24; color: var(--mu-gold); padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 6px; font-family: monospace; }
-
-/* 🛡️ SYSTEM QUIZ DESIGN */
-.quiz-wrapper { background: #121216; border: 2px solid var(--border-line); }
-.quiz-header-status { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--mu-gold); text-transform: uppercase; letter-spacing: 0.5px; }
-.bar-track { height: 6px; background: #09090c; border-radius: 3px; margin: 8px 0 16px; overflow: hidden; }
-.bar-advance { height: 100%; background: linear-gradient(90deg, var(--mu-red), var(--mu-red-glow)); width: 6.66%; transition: .3s; }
-.question-title { font-size: 16px; font-weight: 700; margin-bottom: 18px; color: #fff; line-height: 1.5; }
+/* ปุ่มช้อยส์ขนาดใหญ่ คอนทราสต์สูงกดง่าย */
 .option-btn {
-  width: 100%; text-align: left; padding: 14px 18px; background: #09090c; border: 1px solid var(--border-line);
-  border-radius: var(--radius-md); color: #fff; font-size: 14px; cursor: pointer; margin-bottom: 10px; transition: .2s;
+  width: 100%; text-align: left; padding: 16px 20px; background: #ffffff; border: 2px solid #475569;
+  border-radius: var(--radius-md); color: #111111; font-size: 17px; font-weight: 600; cursor: pointer; margin-bottom: 12px; transition: .2s;
 }
-.option-btn:hover:not(:disabled) { border-color: var(--mu-red); background: var(--surface-glow); }
-.option-btn.correct-state { background: rgba(34, 197, 94, 0.15) !important; border-color: #22c55e !important; color: #4ade80 !important; font-weight: 700; }
-.option-btn.wrong-state { background: rgba(239, 68, 68, 0.15) !important; border-color: var(--red-card) !important; color: #fca5a5 !important; }
+.option-btn:hover:not(:disabled) { border-color: #000000; background: #f1f5f9; }
+.option-btn.correct-state { background: #dcfce7 !important; border-color: #15803d !important; color: #166534 !important; font-weight: 700; border-width: 3px; }
+.option-btn.wrong-state { background: #fee2e2 !important; border-color: #b91c1c !important; color: #991b1b !important; border-width: 3px; }
 
-/* แผงวิเคราะห์เฉลยและจุดผิดพลาดเชิงลึก */
-.panel-referee { padding: 16px; border-radius: var(--radius-md); font-size: 13.5px; line-height: 1.6; margin-top: 14px; display: none; position: relative; }
-.panel-referee.active-show { display: block; animation: smoothReveal 0.3s ease; }
-.panel-referee .title-verdict { font-weight: 800; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-.panel-referee.pos-verdict { background: rgba(34, 197, 94, 0.08); color: #a7f3d0; border: 1px solid #22c55e; }
-.panel-referee.neg-verdict { background: rgba(239, 68, 68, 0.08); color: #fca5a5; border: 1px solid var(--red-card); }
+/* แผงวิเคราะห์เฉลยและจุดผิดพลาดเชิงลึก คอนทราสต์สูงอ่านง่ายมาก */
+.panel-referee { padding: 20px; border-radius: var(--radius-md); font-size: 16px; line-height: 1.7; margin-top: 16px; display: none !important; }
+.panel-referee.pos-verdict { background: #ecfdf5 !important; color: #065f46 !important; border: 3px solid #10b981 !important; }
+.panel-referee.neg-verdict { background: #fef2f2 !important; color: #991b1b !important; border: 3px solid #ef4444 !important; }
+.panel-referee .title-verdict { font-weight: 800; font-size: 18px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
 
-/* สติกเกอร์ใบเหลืองใบแดงสำหรับแถบเฉลย */
-.sticker-card-ref { display: inline-block; width: 14px; height: 20px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
-.card-yellow { background: var(--yellow-card); box-shadow: 0 0 8px var(--yellow-card); }
-.card-red { background: var(--red-card); box-shadow: 0 0 8px var(--red-card); }
+.sticker-card-ref { display: inline-block; width: 16px; height: 24px; border-radius: 4px; vertical-align: middle; margin-right: 8px; border: 1px solid rgba(0,0,0,0.2); }
+.card-yellow { background: #f59e0b; }
+.card-red { background: #ef4444; }
 
-.bottom-control-hub { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border-top: 1px dashed var(--border-line); padding-top: 14px; }
-.hub-btn { background: var(--mu-red); color: #fff; font-weight: 700; font-size: 13px; padding: 12px 24px; border: 1px solid var(--mu-gold); border-radius: 20px; cursor: pointer; display: none; transition: .2s; }
+.bottom-control-hub { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; border-top: 2px dashed var(--border-line); padding-top: 16px; }
+.hub-btn { background: var(--mu-red); color: #fff; font-weight: 700; font-size: 16px; padding: 14px 32px; border: 2px solid var(--mu-gold); border-radius: 25px; cursor: pointer; display: none; }
 .hub-btn:hover { background: var(--mu-red-glow); }
 
-.stadium-footer { text-align: center; padding: 24px 0 20px; font-size: 12px; color: var(--text-muted); border-top: 1px solid var(--border-line); margin-top: 20px; }
+.stadium-footer { text-align: center; padding: 30px 0; font-size: 14px; color: var(--text-muted); border-top: 2px solid var(--border-line); margin-top: 30px; font-weight: 600; }
 
 /* 🖥️💻 RESPONSIVE PC GENERATION */
 @media (min-width: 992px) {
-  .dynamic-layout-container { max-width: 1400px; padding: 30px 40px; }
-  .header-identity h1 { font-size: 36px; }
+  .dynamic-layout-container { max-width: 1300px; padding: 30px 20px; }
+  .header-identity h1 { font-size: 40px; }
   .floating-navbar { display: none; }
   
   .content-grid-system {
@@ -227,40 +209,34 @@ body {
   .column-side { display: flex; flex-direction: column; gap: 32px; }
 }
 
-/* 📱 RESPONSIVE MOBILE */
 @media (max-width: 991px) {
-  .dynamic-layout-container { max-width: 460px; }
+  .dynamic-layout-container { max-width: 600px; }
 }
 
-@keyframes bounceMascot { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-@keyframes spinBall { to { transform: rotate(360deg); } }
-@keyframes smoothReveal { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes logoPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 </style>
 </head>
 <body>
 
 <div id="intro-screen">
-  <div class="mascot-fred">
-    <div class="fred-eyes"><div class="fred-eye"></div><div class="fred-eye"></div></div>
-    <div class="fred-smile"></div>
-  </div>
-  <h1 class="intro-title">Welcome <span>Ajan WA</span></h1>
-  <p class="intro-desc">to my masterpiece project (Manchester United Edition)</p>
-  <button class="intro-btn" onclick="enterTacticalSite()">ENTER OLD TRAFFORD 🟥⚡</button>
+  <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" alt="Manchester United Crest" class="mu-official-logo">
+  <h1 class="intro-title">ยินดีต้อนรับคุณครู <span>Ajan WA</span></h1>
+  <p class="intro-desc">โครงการพัฒนาสื่อการเรียนรู้ภาษาอังกฤษ (ฉบับตัวอักษรใหญ่พิเศษเพื่อสายตาสูงวัย)</p>
+  <button class="intro-btn" onclick="enterTacticalSite()">เข้าสู่บทเรียนโอลด์แทรฟฟอร์ด 🟥⚡</button>
 </div>
 
 <div class="dynamic-layout-container">
 
   <div class="header-identity">
-    <div class="main-badge">This project is made by Teerin Pooko class M.5/3 No.26 🔴</div>
-    <h1>Adverb Clause of <em>Result</em> <span class="sticker-ball-mu"></span></h1>
+    <div class="main-badge">จัดทำโดย นายธีรินทร์ ภู่โค ชั้น ม.5/3 เลขที่ 26 🔴</div>
+    <h1>Adverb Clause of <em>Result</em> <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" alt="MU Crest" class="mu-logo-inline"></h1>
   </div>
 
   <nav class="floating-navbar">
-    <a class="nav-item active" href="#guide-sec" onclick="setNavActive(this)">Guide</a>
-    <a class="nav-item" href="#mindmap-sec" onclick="setNavActive(this)">Mindmap</a>
-    <a class="nav-item" href="#examples-sec" onclick="setNavActive(this)">Examples</a>
-    <a class="nav-item" href="#quiz-sec" onclick="setNavActive(this)">Quiz</a>
+    <a class="nav-item active" href="#guide-sec" onclick="setNavActive(this)">คำอธิบาย</a>
+    <a class="nav-item" href="#mindmap-sec" onclick="setNavActive(this)">ผังความจำ</a>
+    <a class="nav-item" href="#examples-sec" onclick="setNavActive(this)">ตัวอย่าง</a>
+    <a class="nav-item" href="#quiz-sec" onclick="setNavActive(this)">ทำข้อสอบ</a>
   </nav>
 
   <div class="content-grid-system">
@@ -274,42 +250,61 @@ body {
         </div>
         
         <div class="deep-text-block">
-          <p><strong>Adverb Clause of Result</strong> คือ อนุประโยค (ประโยคย่อย) ที่ทำหน้าที่เป็นส่วนขยายกริยาหรือประโยคหลัก เพื่อระบุหรืออธิบาย <strong>"ผลลัพธ์ที่เกิดขึ้นตามมา"</strong> จากเหตุการณ์ ความรุนแรง หรือปริมาณที่ถูกระบุไว้ในประโยคหลัก</p>
-          
-          <p>ในแง่ของไวยากรณ์ภาษาอังกฤษ ตัวขับเคลื่อนระบบนี้จะมีจุดสังเกตเด่นชัดคือการทำงานร่วมกับคำเชื่อมสองตัวหลัก ได้แก่ <strong>so...that</strong> และ <strong>such...that</strong> ซึ่งแปลไทยว่า <strong>"มากเสียจนกระทั่งว่า"</strong></p>
+          <p><strong>Adverb Clause of Result</strong> คือ อนุประโยค (ประโยคย่อย) ที่ทำหน้าที่ขยายประโยคหลัก เพื่ออธิบายถึง <strong>"ผลลัพธ์ที่เกิดขึ้นตามมาจากเหตุการณ์ก่อนหน้า"</strong> โดยมีหลักคิดง่ายๆ คือ เหตุการณ์แรกมีความรุนแรง มีปริมาณ หรือมีความเด่นชัด <em>"มากเสียจนกระทั่งส่งผลให้เกิดเหตุการณ์ที่สองตามมา"</em> ไวยากรณ์บทนี้ควบคุมด้วย 2 ตัวเชื่อมหลักคือ <strong>so...that</strong> และ <strong>such...that</strong></p>
 
-          <div class="section-divider">🔴 1. เจาะลึกกลยุทธ์การใช้ SO...THAT</div>
-          <p>โครงสร้างนี้ถูกออกแบบมาเพื่อเน้นย้ำความรุนแรงของคำคุณศัพท์ (Adjective) หรือคำกริยาวิเศษณ์ (Adverb) ที่อยู่โดดๆ โดยไม่มีคำนามมาต่อท้าย</p>
-          <div class="formula-box">Subject + Verb + so + [Adj / Adv] + that + Result Clause</div>
-          <p><strong>วิธีการสังเกตและนำไปใช้:</strong> หากในโจทย์สอบปรากฏคำบอกลักษณะ เช่น <em>fast, beautiful, high, expensive</em> ให้เลือกใช้คู่กับ <strong>so</strong> ทันที</p>
+          <div class="section-divider">🔴 1. เจาะลึกการใช้ SO...THAT (มากจนกระทั่ง)</div>
+          <p class="no-indent">โครงสร้างนี้ใช้ขยายคำประเภท <strong>คำคุณศัพท์ (Adjective)</strong> หรือ <strong>คำกริยาวิเศษณ์ (Adverb)</strong> ที่วางอยู่โดดๆ ลำพัง โดยไม่มีคำนามตามท้าย</p>
+          <div class="formula-box">ประธาน + กริยา + so + [คำคุณศัพท์ / คำวิเศษณ์] + that + ประโยคบอกผลลัพธ์</div>
+          <p class="no-indent"><strong>วิธีสังเกตในสนามสอบ:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>ขยาย Adjective:</strong> เช่น <em>The ticket was <strong>so expensive that</strong> I couldn't buy it.</em> (expensive เป็นคำคุณศัพท์บอกราคาแพง วางอยู่หลัง Verb to be)</li>
+            <li><strong>ขยาย Adverb:</strong> เช่น <em>Rashford ran <strong>so quickly that</strong> defenders fell down.</em> (quickly เป็นคำวิเศษณ์ขยายการวิ่ง ran)</li>
+          </ul>
           
-          <div class="section-divider">🔴 2. เจาะลึกกลยุทธ์การใช้ SUCH...THAT</div>
-          <p>ตรงกันข้ามกับ SO ตัวเชื่อมนี้จะถูกส่งลงสนามเมื่อองค์ประกอบด้านหลังมีการรวมตัวกันกลายเป็น <strong>"กลุ่มคำนาม (Noun Phrase)"</strong> ซึ่งหมายความว่าจะต้องมีคำนามทำหน้าที่เป็นประธานหรือกรรมปิดท้ายวลีเสมอ</p>
-          <div class="formula-box">Subject + Verb + such + [(a/an) + Adj + Noun] + that + Result Clause</div>
-          <p><strong>วิธีการสังเกตและนำไปใช้:</strong> ให้ตรวจสอบคำข้างหน้าคำเชื่อม <code>that</code> หากพบคำนามเดี่ยวหรือคำที่มีรูปคำคุณศัพท์นำหน้าคำนาม เช่น <em>a beautiful day, great players, hot weather</em> จุดนี้คือพื้นที่สัมปทานของ <strong>such</strong> เท่านั้น</p>
+          <div class="section-divider">🔴 2. เจาะลึกการใช้ SUCH...THAT (มากจนกระทั่ง)</div>
+          <p class="no-indent">โครงสร้างนี้ใช้เมื่อกลุ่มคำข้างหลังช่องว่างมีการรวมตัวกันเป็น <strong>"กลุ่มคำนาม (Noun Phrase)"</strong> เสมอ ไม่ว่าจะเป็นนามเอกพจน์ พหูพจน์ หรือนามนับไม่ได้</p>
+          <div class="formula-box">ประธาน + กริยา + such + [(a/an) + คุณศัพท์ + คำนาม] + that + ประโยคบอกผลลัพธ์</div>
+          <p class="no-indent"><strong>การจำแนกรูปคำนามอย่างละเอียด:</strong></p>
+          <ul class="bullet-list">
+            <li><strong>นามนับได้เอกพจน์:</strong> ต้องมี <code>a / an</code> นำหน้าเสมอ เช่น <em>such <strong>a</strong> beautiful goal that...</em> หรือ <em>such <strong>an</strong> intense match that...</em></li>
+            <li><strong>นามนับได้พหูพจน์:</strong> ห้ามใส่ a/an เด็ดขาด และคำนามต้องเติม s/es เช่น <em>such great players that...</em></li>
+            <li><strong>นามนับไม่ได้:</strong> ห้ามใส่ a/an และห้ามเติม s เช่น <em>such heavy rain that...</em> (ฝนตกหนักมากจน...)</li>
+          </ul>
 
-          <div class="section-divider">🔴 3. กฎเหล็กจุดโทษของกรรมการ (Must-Know)</div>
-          <p style="color: var(--yellow-card); font-weight: 500;"><span class="sticker-card-ref card-yellow"></span> ข้อควรระวังระดับทีมชาติ: คำบอกปริมาณ (Quantity Words)</p>
-          <p>นักเรียนมักโดนหลอกในข้อสอบบ่อยครั้งเมื่อเจอคำนามที่มีตัวระบุปริมาณ ได้แก่ <strong>many, few, much, little</strong> คุมอยู่ด้านหน้า แม้คำเหล่านั้นจะเป็นกลุ่มคำนาม แต่ทางไวยากรณ์บังคับให้ใช้คู่กับ <strong>SO</strong> เท่านั้น ห้ามใช้ such เด็ดขาด!</p>
-          <div class="formula-box">so many + นามนับได้พหูพจน์ / so much + นามนับไม่ได้</div>
+          <div class="section-divider">🔴 3. กฎเหล็กจุดโทษระวังโดนหลอก (Must-Know Exceptions)</div>
+          <p style="color: var(--yellow-card); font-weight: 700;" class="no-indent"><span class="sticker-card-ref card-yellow"></span> จุดห้ามพลาด: หากมีคำบอกปริมาณอยู่ด้านหน้าคำนาม</p>
+          <p>หากข้างหน้าคำนามมีคำบอกปริมาณต่อไปนี้ปรากฏอยู่ ได้แก่ <strong>many, few, much, little</strong> แม้ข้างหลังจะเป็นคำนาม แต่กฎไวยากรณ์บังคับให้ใช้คู่กับ <strong>SO</strong> เท่านั้น ห้ามใช้ such เด็ดขาด!</p>
+          <div class="formula-box">so many + นามพหูพจน์  |  so few + นามพหูพจน์ (น้อยจน...)
+so much + นามนับไม่ได้  |  so little + นามนับไม่ได้ (น้อยจน...)</div>
+          <p><em>ตัวอย่าง: The club spent <strong>so much money</strong> that they broke the rules.</em> (ใช้ so คู่กับ much money ห้ามใช้ such)</p>
+
+          <div class="section-divider">🔴 4. โครงสร้างแบบสลับประโยคขั้นสูง (Inversion Style)</div>
+          <p>ในข้อสอบระดับสูง หากต้องการเน้นย้ำผลลัพธ์ให้มีความเป็นทางการและทรงพลัง สามารถนำเอาสำนวน <strong>So + คำคุณศัพท์</strong> ขึ้นต้นประโยคได้ แต่ต้องสลับเอาตัวกริยามาวางไว้ข้างหน้าประธานเหมือนรูปประโยคคำถาม</p>
+          <div class="formula-box">So + [คำคุณศัพท์] + [กริยาช่วย] + ประธาน + that + ...</div>
+          <p><em>ตัวอย่างแปลงรูป: <strong>So exciting was the match that</strong> no one left.</em> (การแข่งขันน่าตื่นเต้นมากเสียจนไม่มีใครยอมเดินออกจากสนาม)</p>
         </div>
       </div>
 
       <div class="ui-card" id="mindmap-sec">
         <div class="card-icon-header">
           <div class="icon-wrapper">💡</div>
-          <h2 class="card-title">Interactive Mindmap แผนผังจำง่าย</h2>
+          <h2 class="card-title">Interactive Mindmap แผนผังช่วยจำทางยุทธวิธี</h2>
         </div>
-        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">คลิกเพื่อกางหัวข้อวิเคราะห์แยกประเภทคำเชื่อม</p>
+        <p style="font-size: 16px; color: var(--text-muted); margin-bottom: 14px; font-weight: 600;">ผู้สูงอายุสามารถคลิกที่หัวข้อด้านล่างเพื่อกางอ่านเนื้อหาเพิ่มเติมได้ทันทีครับ</p>
 
         <div class="accordion-node" onclick="handleAccordion(this)">
-          <div class="accordion-head"><span>⚽ การวางตําแหน่งประโยค (Positioning)</span><span>▼</span></div>
-          <div class="accordion-body">Adverb Clause of Result จะต้องวางต่อท้ายประโยคหลัก (Main Clause) เสมอ เพื่อทำหน้าที่เป็นส่วนรับช่วงต่อเหตุการณ์เพื่อสรุปผลลัพธ์ และในภาษาพูดที่เป็นกันเอง เราสามารถ "ตัดคำว่า that ออกได้" โดยที่ความหมายไม่เปลี่ยนแปลงครับ</div>
+          <div class="accordion-head"><span>⚽ การตัดคำว่า That ทิ้งในภาษาพูด</span><span>▼</span></div>
+          <div class="accordion-body">ในทางปฏิบัติที่ไม่เป็นทางการหรือการพูดคุยทั่วไป เราสามารถละคำว่า <strong>that</strong> ออกไปได้โดยความหมายไม่เปลี่ยนแปลง เช่น <em>The stadium was so loud (that) I couldn't hear.</em> แต่ถ้าทำในข้อสอบโรงเรียนแนะนำให้เขียนคำว่า that ไว้เสมอเพื่อความปลอดภัยครับ</div>
         </div>
 
         <div class="accordion-node" onclick="handleAccordion(this)">
-          <div class="accordion-head"><span>⚽ การแปลงประโยคย้อนกลับ (Inversion)</span><span>▼</span></div>
-          <div class="accordion-body">ในข้อสอบระดับสูง หากนำคำว่า <strong>So + Adj</strong> ขึ้นต้นประโยค จะต้องทำการสลักษณ์โครงสร้างประโยคส่วนแรกให้กลายเป็นรูปประโยคคำถาม (Inversion) เช่น <em>So high did he jump that he touched the bar.</em> (เขากระโดดสูงมากเสียจนแตะคาน)</div>
+          <div class="accordion-head"><span>⚽ ความแตกต่างระหว่าง So...that กับ Too...to</span><span>▼</span></div>
+          <div class="accordion-body">โครงสร้างต่างกันโดยสิ้นเชิง <strong>So...that</strong> จะตามหลังด้วยประโยคเต็มรูปที่มีประธานและกริยาครบถ้วน แต่ <strong>Too + คุณศัพท์ + to + กริยาช่อง 1</strong> จะแปลว่า "มากเกินกว่าที่จะทำได้" ซึ่งมีความหมายติดลบและทำไม่ได้อยู่ในตัวอยู่แล้ว</div>
+        </div>
+        
+        <div class="accordion-node" onclick="handleAccordion(this)">
+          <div class="accordion-head"><span>⚽ สูตรลัดจำง่ายเอาไว้ใช้ทำข้อสอบความเร็วสูง</span><span>▼</span></div>
+          <div class="accordion-body">1. มองไปหลังช่องว่าง -> เจอคำคุณศัพท์โดดๆ ไม่มีนามค้ำท้าย เลือกตอบ <strong>SO</strong><br>2. มองไปหลังช่องว่าง -> เจอคำนามต่อท้ายมาด้วย เลือกตอบ <strong>SUCH</strong><br>3. มองไปหลังช่องว่าง -> เจอคำแก๊งปริมาณ many / few / much / little เลือกตอบ <strong>SO</strong> เสมอ!</div>
         </div>
       </div>
 
@@ -320,77 +315,117 @@ body {
       <div class="ui-card" id="examples-sec">
         <div class="card-icon-header">
           <div class="icon-wrapper">📊</div>
-          <h2 class="card-title">คลังประโยคตัวอย่างแมตช์เดย์จำลอง</h2>
+          <h2 class="card-title">คลังประโยคตัวอย่างจำลองเหตุการณ์ในแมตช์การแข่งขัน</h2>
         </div>
         
         <div class="segmented-control">
-          <button class="segment-btn active" onclick="filterSegments('affirmative', this)">บอกเล่า</button>
-          <button class="segment-btn" onclick="filterSegments('negative', this)">ปฏิเสธ</button>
-          <button class="segment-btn" onclick="filterSegments('question', this)">คำถาม</button>
+          <button class="segment-btn active" onclick="filterSegments('affirmative', this)">ประโยคบอกเล่า</button>
+          <button class="segment-btn" onclick="filterSegments('negative', this)">ประโยคปฏิเสธ</button>
+          <button class="segment-btn" onclick="filterSegments('question', this)">โครงสร้างพิเศษ</button>
         </div>
 
         <div class="example-pool active" id="seg-affirmative">
           <div class="example-row highlighted">
             <div class="text-en">The midfielder passed the ball <mark>so accurately that</mark> it split the defense.</div>
-            <div class="text-th">กองกลางส่งบอลแม่นยำมากจนกระทั่งมันทะลุผ่านแนวกองหลังทั้งหมด</div>
-            <span class="label-tag">so + adverb (accurately)</span>
+            <div class="text-th">กองกลางส่งลูกบอลอย่างแม่นยำมากจนกระทั่งมันสามารถเจาะทะลุแนวกองหลังได้</div>
+            <span class="label-tag">ใช้ so + ขยายกริยาวิเศษณ์ (accurately)</span>
           </div>
           <div class="example-row">
             <div class="text-en">It was <mark>such a heavy rain that</mark> the match pitch became flooded.</div>
-            <div class="text-th">ฝนตกหนักมากจนกระทั่งพื้นสนามแข่งขันเกิดน้ำท่วมขัง</div>
-            <span class="label-tag">such + noun phrase (heavy rain)</span>
+            <div class="text-th">มันเป็นฝนที่ตกหนักมากจนกระทั่งพื้นสนามแข่งขันเกิดน้ำท่วมขัง</div>
+            <span class="label-tag">ใช้ such + ตามด้วยกลุ่มนามเอกพจน์ (heavy rain)</span>
           </div>
           <div class="example-row">
-            <div class="text-en">The striker had <mark>so many scoring opportunities that</mark> he won the golden boot.</div>
-            <div class="text-th">กองหน้ามีโอกาสทำประตูมากมายจนทำให้เขาคว้าตราสโมสรทองคำมาครอง</div>
-            <span class="label-tag">กฎพิเศษ: so + many + Noun</span>
+            <div class="text-en">The striker had <mark>so many scoring opportunities that</mark> he easily won the golden boot.</div>
+            <div class="text-th">กองหน้ามีโอกาสทำประตูมากมายจนทำให้เขาคว้าสโมสรทองคำมาครองได้อย่างง่ายดาย</div>
+            <span class="label-tag">กฎพิเศษ: so + วางหน้าคำว่า many</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">They are <mark>such loyal fans that</mark> they never leave the stadium before the final whistle.</div>
+            <div class="text-th">พวกเขาเป็นแฟนบอลที่ภักดีมากเสียจนไม่เคยเดินออกจากสนามก่อนนกหวีดหมดเวลา</div>
+            <span class="label-tag">ใช้ such + กลุ่มนามพหูพจน์ (loyal fans)</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">Bruno Fernandes ran <mark>so tirelessly that</mark> he covered over 12 kilometers in one match.</div>
+            <div class="text-th">บรูโน่ แฟร์นันเดส วิ่งอย่างไม่รู้จักเหน็ดเหนื่อยมากจนกระทั่งเขาวิ่งระยะทางเกิน 12 กิโลเมตรในนัดเดียว</div>
+            <span class="label-tag">ใช้ so + ขยายกริยาวิเศษณ์ (tirelessly)</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">The young prospect displayed <mark>such incredible talent that</mark> Europe's biggest clubs made offers.</div>
+            <div class="text-th">นักเตะดาวรุ่งแสดงพรสวรรค์ที่น่าทึ่งมากจนสโมสรยักษ์ใหญ่ในยุโรปพากันยื่นข้อเสนอ</div>
+            <span class="label-tag">ใช้ such + กลุ่มนามนับไม่ได้ (incredible talent)</span>
           </div>
         </div>
 
         <div class="example-pool" id="seg-negative">
           <div class="example-row highlighted">
-            <div class="text-en">The pitch was <mark>not so slippery that</mark> the players couldn't run.</div>
-            <div class="text-th">พื้นสนามไม่ได้ลื่นมากจนขนาดที่ทำให้นักเตะไม่สามารถวิ่งได้</div>
-            <span class="label-tag">not + so + adjective</span>
+            <div class="text-en">The pitch was <mark>not so slippery that</mark> the players couldn't control the ball.</div>
+            <div class="text-th">พื้นสนามไม่ได้ลื่นมากจนขนาดที่ทำให้นักเตะไม่สามารถควบคุมลูกบอลได้</div>
+            <span class="label-tag">รูปปฏิเสธ: not + so + คุณศัพท์</span>
           </div>
           <div class="example-row">
-            <div class="text-en">It was <mark>not such a serious injury that</mark> required surgery.</div>
-            <div class="text-th">มันไม่ได้เป็นอาการบาดเจ็บที่รุนแรงมากจนถึงขั้นต้องเข้ารับการผ่าตัด</div>
-            <span class="label-tag">not + such + noun phrase</span>
+            <div class="text-en">It was <mark>not such a serious injury that</mark> required major surgery.</div>
+            <div class="text-th">มันไม่ได้เป็นอาการบาดเจ็บที่รุนแรงมากจนถึงขั้นต้องเข้ารับการผ่าตัดใหญ่</div>
+            <span class="label-tag">รูปปฏิเสธ: not + such + นามวลี</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">The team had <mark>so little possession that</mark> they couldn't create a single shot on target.</div>
+            <div class="text-th">ทีมมีเปอร์เซ็นต์การครองบอลน้อยมากจนไม่สามารถสร้างโอกาสยิงเข้ากรอบได้เลย</div>
+            <span class="label-tag">กฎพิเศษปริมาณน้อย: so + little + นามนับไม่ได้</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">The manager's press conference was <mark>not so controversial that</mark> it caused a team drama.</div>
+            <div class="text-th">การแถลงข่าวของผู้จัดการทีมไม่ได้เป็นประเด็นขัดแย้งมากจนทำให้เกิดเรื่องดราม่าในทีม</div>
+            <span class="label-tag">รูปปฏิเสธใช้คู่กับ SO</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">The referee did <mark>not make such obvious errors that</mark> the committee needed to suspend him.</div>
+            <div class="text-th">ผู้ตัดสินไม่ได้ทำความผิดพลาดที่ชัดเจนมากจนถึงขั้นที่คณะกรรมการต้องสั่งพักงาน</div>
+            <span class="label-tag">รูปปฏิเสธใช้คู่กับ SUCH + นามพหูพจน์</span>
           </div>
         </div>
 
         <div class="example-pool" id="seg-question">
           <div class="example-row highlighted">
-            <div class="text-en">Was the tactical plan <mark>so complex that</mark> the squad got confused?</div>
-            <div class="text-th">แผนการเล่นมันซับซ้อนมากจนทำให้คนในทีมเกิดความสับสนใช่ไหม?</div>
-            <span class="label-tag">Question with SO</span>
+            <div class="text-en"><mark>So powerful was the shot that</mark> the ball ripped through the stadium net.</div>
+            <div class="text-th">ลูกยิงนั้นทรงพลังมากเสียจนลูกบอลพุ่งทะลุตาข่ายของสนามแข่งขันออกไปเลย</div>
+            <span class="label-tag">โครงสร้างกลับประโยคขั้นสูง (So + คุณศัพท์ + กริยา + ประธาน)</span>
           </div>
           <div class="example-row">
-            <div class="text-en">Did they offer <mark>such a low price that</mark> the club rejected the transfer?</div>
-            <div class="text-th">พวกเขายื่นข้อเสนอราคาต่ำมากจนสโมสรปฏิเสธการย้ายทีมเลยหรือเปล่า?</div>
-            <span class="label-tag">Question with SUCH</span>
+            <div class="text-en">Was the tactical plan <mark>so complex that</mark> the squad got confused?</div>
+            <div class="text-th">แผนการเล่นมันซับซ้อนมากจนทำให้คนในทีมเกิดความสับสนใช่ไหม?</div>
+            <span class="label-tag">รูปประโยคคำถามที่ใช้ SO</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en">Did they offer <mark>such a low price that</mark> the club rejected the transfer immediately?</div>
+            <div class="text-th">พวกเขายื่นข้อเสนอราคาต่ำมากจนสโมสรปฏิเสธการย้ายทีมในทันทีเลยหรือเปล่า?</div>
+            <span class="label-tag">รูปประโยคคำถามที่ใช้ SUCH</span>
+          </div>
+          <div class="example-row">
+            <div class="text-en"><mark>So fast did the winger sprint that</mark> the assistant referee missed the offside line.</div>
+            <div class="text-th">ปีกตัวรุกสปริ้นท์ตัววิ่งเร็วมากจนผู้ช่วยผู้ตัดสินมองเส้นล้ำหน้าไม่ทัน</div>
+            <span class="label-tag">โครงสร้างกลับประโยคขั้นสูงสไตล์คำวิเศษณ์</span>
           </div>
         </div>
       </div>
 
       <div class="ui-card quiz-wrapper" id="quiz-sec">
         <div class="quiz-header-status">
-          <span id="quiz-title-indicator">MATCH 1 OF 15</span>
-          <span id="quiz-live-score-text">SCORE: 0/15</span>
+          <span id="quiz-title-indicator">นัดแข่งขันที่ 1 จาก 25</span>
+          <span id="quiz-live-score-text">คะแนนของคุณตอนนี้: 0/25</span>
         </div>
         <div class="bar-track"><div class="bar-advance" id="quiz-progress-bar"></div></div>
         
         <div id="quiz-arena">
-          <h3 class="question-title" id="quiz-question-text">Loading match data...</h3>
+          <h3 class="question-title" id="quiz-question-text">กำลังโหลดโจทย์ข้อสอบ...</h3>
           <div id="quiz-options-box"></div>
         </div>
 
         <div class="panel-referee" id="verdict-box"></div>
 
         <div class="bottom-control-hub">
-          <div style="font-size: 12px; color: var(--text-muted);" id="tactical-hint">เป้าหมาย: เคลียร์โจทย์แชมเปียนชิปทั้ง 15 ข้อ</div>
-          <button class="hub-btn" id="next-match-btn" onclick="advanceToNextMatch()">NEXT MATCH ➡️</button>
+          <div style="font-size: 15px; color: var(--text-primary); font-weight: 700;" id="tactical-hint">เป้าหมาย: ตอบถูกครบทั้ง 25 ข้อเพื่อคว้าแชมป์ลีก</div>
+          <button class="hub-btn" id="next-match-btn" onclick="advanceToNextMatch()">ทำโจทย์ข้อถัดไป ➡️</button>
         </div>
       </div>
 
@@ -398,7 +433,7 @@ body {
   </div> 
   
   <footer class="stadium-footer">
-    <p>© 2026 Theatre of Dreams Result System — Manchester United Hybrid Edition</p>
+    <p>© 2026 ระบบตรวจสอบไวยากรณ์ภาษาอังกฤษสำหรับผู้สูงอายุ — สโมสรแมนเชสเตอร์ ยูไนเต็ด</p>
   </footer>
 
 </div>
@@ -416,11 +451,11 @@ function setNavActive(element) {
 function handleAccordion(element) {
   const body = element.querySelector('.accordion-body');
   const indicator = element.querySelector('.accordion-head span:last-child');
-  if(body.classList.contains('open')) {
-    body.classList.remove('open');
+  if(body.style.display === 'block') {
+    body.style.display = 'none';
     indicator.innerText = '▼';
   } else {
-    body.classList.add('open');
+    body.style.display = 'block';
     indicator.innerText = '▲';
   }
 }
@@ -432,111 +467,182 @@ function filterSegments(segmentId, triggerBtn) {
   triggerBtn.classList.add('active');
 }
 
+// ⚽ คลังข้อสอบแชมเปียนชิปฉบับสมบูรณ์ 25 ข้อสำหรับผู้สูงอายุ
 const championshipQuizDB = [
   {
     q: "1. The striker shot the ball ______ powerfully that the goalkeeper couldn't even react.",
     opts: ["A) so", "B) such", "C) very", "D) too"],
     ans: 0,
-    rightReason: "ใช้ <strong>so</strong> ขยายคำกริยาวิเศษณ์เดี่ยวๆ (powerfully) เพื่อระบุผลลัพธ์ว่ายิงแรงมากเสียจนผู้รักษาประตูปัดไม่ทัน",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> หากคุณหลงกา such จะผิดหลักเพราะด้านหลังไม่มีคำนามรองรับเลย มีเพียงคำลงท้ายด้วย -ly (Adverb) เท่านั้น ซึ่งเป็นสิทธิ์ขาดของ SO"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะอยู่หน้าคำว่า powerfully ซึ่งทำหน้าที่เป็นคำกริยาวิเศษณ์ (Adverb) เพียวๆ ไม่มีคำนามต่อท้าย โครงสร้างจับคู่คือ so...that",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ตอบ such ไม่ได้เพราะด้านหลังไม่มีกลุ่มคำนามพ่วงท้าย และใช้ very ไม่ได้เพราะ very ไม่ใช้โครงสร้างร่วมกับคำเชื่อมคำว่า that ด้านหลัง"
   },
   {
     q: "2. It was ______ an incredible save that the entire stadium stood up to applaud.",
     opts: ["A) so", "B) such", "C) total", "D) much"],
     ans: 1,
-    rightReason: "ใช้ <strong>such</strong> เนื่องจากตามด้วยโครงสร้างกลุ่มนามวลีที่มีเอกพจน์นับได้ชัดเจน 'an incredible save' (การเซฟที่มหัศจรรย์)",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> ห้ามใช้ so หน้ากลุ่มคำนามที่มีอาร์ติเคิล 'a/an' ปักหมุดอยู่เด็ดขาด โครงสร้าง a/an + Adj + Noun ต้องตกเป็นของ SUCH เสมอ"
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะหลังช่องว่างมีโครงสร้างกลุ่มคำนามเอกพจน์นับได้ชัดเจนคือ 'an incredible save' (การเซฟลูกอันมหัศจรรย์)",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ห้ามใช้ so วางไว้หน้าคำที่มีตัวเอ (a/an) นำหน้าโครงสร้างคำนามเด็ดขาด โครงสร้าง a/an + คุณศัพท์ + นาม ต้องเป็นของ such เท่านั้น"
   },
   {
     q: "3. The team made ______ many mistakes during the first half that the coach was furious.",
     opts: ["A) such", "B) so", "C) extremely", "D) highly"],
     ans: 1,
-    rightReason: "ใช้ <strong>so</strong> เพราะเข้ากฎข้อยกเว้นปริมาณขั้นสูง คำว่า 'many' บังคับจับคู่กับ SO เสมอไม่ว่าจะตามด้วยนามพหูพจน์ใดๆ ก็ตาม",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> โจทย์ข้อนี้เป็นกับดักยอดฮิต หลายคนเห็นคำนามพหูพจน์ 'mistakes' แล้วรีบกา such ทันที แต่จำไว้ว่าถ้ามีคำว่า many อยู่ข้างหน้า อำนาจไวยากรณ์จะถูกโอนไปให้ SO ทันที"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะข้อนี้เข้ากฎข้อยกเว้นปริมาณขั้นสูง คำว่า 'many' ถูกบังคับในกฎไวยากรณ์ว่าต้องเคียงคู่กับ SO เท่านั้น",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> หลายคนเห็น mistakes เติม s เป็นคำนามพหูพจน์แล้วจะเผลอกา such แต่เนื่องจากเจอคำว่า many บล็อกหน้าอยู่ อำนาจทั้งหมดจึงถูกโอนไปหา SO"
   },
   {
     q: "4. The midfielder's control was ______ precise that he never lost possession.",
     opts: ["A) such", "B) very", "C) so", "D) perfect"],
     ans: 2,
-    rightReason: "ใช้ <strong>so</strong> เนื่องจากคำที่อยู่หลังช่องว่างคือคำคุณศัพท์ (Adjective) บอกคุณลักษณะความแม่นยำยำ 'precise' ที่อยู่เดี่ยวๆ หลังกริยา Verb to be",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> หากคุณกา very แม้ความหมายจะดูคุ้นหู แต่โครงสร้างภาษาอังกฤษที่ใช้บอกผลลัพธ์สรุปเชื่อมกับคำว่า 'that' จะไม่ใช้คำว่า very...that ในประโยคเด็ดขาด"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะคำว่า precise เป็นคำคุณศัพท์ (Adjective) บอกคุณลักษณะความแม่นยำที่ตั้งอยู่โดดๆ หลัง Verb to be",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> แม้คำว่า very จะคุ้นหูแต่เมื่อดูโครงสร้างประโยคย่อยด้านหลังที่เชื่อมต่อด้วยคำว่า 'that' จะต้องใช้ระบบ so...that เสมอ"
   },
   {
     q: "5. They suffered ______ a heavy defeat that they were knocked out of the tournament.",
     opts: ["A) so", "B) such", "C) real", "D) too"],
     ans: 1,
-    rightReason: "ใช้ <strong>such</strong> เพราะเข้าโครงสร้างหลักของนามวลีนับได้แบบเป๊ะๆ คือ 'such + a + heavy (Adj) + defeat (Noun)'",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> หากเผลอใช้ so จะถือว่าผิดหลักโครงสร้างทันที เพราะคำว่า defeat ทำหน้าที่เป็นคำนามหลักค้ำท้ายประโยคย่อยส่วนแรกอยู่"
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะเข้าโครงสร้างคำนามวลีนับได้สมบูรณ์แบบคือ 'such + a + heavy (คุณศัพท์) + defeat (คำนามหลัก แปลว่าความพ่ายแพ้)'",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ถ้าใช้ so จะผิดหลักทันทีเนื่องจากโครงสร้างประโยคครึ่งแรกจบด้วยคำนาม ไม่ได้จบที่คำคุณศัพท์เดี่ยวๆ"
   },
   {
     q: "6. The winger had ______ little stamina left that he couldn't sprint back to defend.",
     opts: ["A) such", "B) too", "C) so", "D) more"],
     ans: 2,
-    rightReason: "ใช้ <strong>so</strong> เพราะเจอกลุ่มคำบอกปริมาณน้อยสำหรับคำนามนับไม่ได้คือคำว่า 'little' ซึ่งบังคับเชื่อมด้วยคำว่า SO เท่านั้น",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> อย่าหลงกลใช้ such เพียงเพราะเห็นคำนาม stamina เพราะกฎของคำบอกปริมาณ (much/little/many/few) ใหญ่กว่ากฎนามทั่วไปเสื่อเสมอ"
+    rightReason: "เฉลยตอบ <strong>so</strong> เนื่องจากคำหลังช่องว่างคือคำบอกปริมาณน้อยสำหรับนามนับไม่ได้คือคำว่า 'little' ซึ่งมีกฎบังคับว่าต้องใช้คู่กับ SO เสมอ",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ห้ามวิเคราะห์แบบตื้นๆ ว่าพละกำลัง (stamina) เป็นคำนามแล้วเลือกตอบ such เพราะคำบอกปริมาณมีสิทธิ์ใหญ่กว่าคำนามปกติ"
   },
   {
     q: "7. It was ______ intense tactical match that both managers felt exhausted.",
     opts: ["A) so", "B) such a", "C) such an", "D) so an"],
     ans: 2,
-    rightReason: "ใช้ <strong>such an</strong> เพราะคำว่า 'intense' ขึ้นต้นด้วยเสียงสระ (ตัว I) และตามด้วยคำนามหลักคือนัดการแข่งขัน 'match'",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> หากคุณตอบข้อ B (such a) จะผิดหลักการใช้อาร์ติเคิลทันที เนื่องจากเสียงพยัญชนะต้นของ intense ออกเสียงเป็น อ.อ่าง ต้องใช้ an เท่านั้น"
+    rightReason: "เฉลยตอบ <strong>such an</strong> เนื่องจากคำคุณศัพท์ 'intense' ขึ้นต้นออกเสียงเป็นสระ (เสียง อ.) และมีคำนามหลักรองรับคือคำว่านัดแข่งขัน 'match'",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> หากคุณตอบ such a จะผิดหลักเรื่องการใช้อาร์ติเคิลทันทีเนื่องจาก intense ออกเสียงสระ ต้องใช้คู่กับคำว่า an"
   },
   {
     q: "8. The fans cheered ______ loudly that the referee's whistle could barely be heard.",
     opts: ["A) so", "B) such", "C) extreme", "D) intense"],
     ans: 0,
-    rightReason: "ใช้ <strong>so</strong> ขยายคำกริยาวิเศษณ์บอกลักษณะอาการ 'loudly' (อย่างเสียงดังมาก) เพื่อส่งต่อผลลัพธ์ไปยังส่วนประโยคหลัง",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> อย่าพยายามมองหาคำนามในข้อนี้ คำว่า loudly เป็น Adverb แท้ๆ ลงท้ายด้วย -ly ไม่มีสิทธิ์จับคู่กับคำเชื่อมประเภท such ทุกกรณี"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะใช้ขยายกริยาวิเศษณ์บอกลักษณะอาการ 'loudly' (อย่างเสียงดังมาก) เพื่อส่งแรงเชื่อมไปยังผลลัพธ์ในส่วนประโยคหลัง",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> คำว่า loudly ลงท้ายด้วย -ly เป็นกริยาวิเศษณ์แท้ ไม่มีคำนามผสมอยู่เลย จึงไม่มีสิทธิ์เลือกใช้คำจำพวก such ทุกกรณี"
   },
   {
     q: "9. The club owners spent ______ much money on new signings that they ran into financial debt.",
     opts: ["A) such", "B) so", "C) extreme", "D) plenty"],
     ans: 1,
-    rightReason: "ใช้ <strong>so</strong> เพราะคำบอกปริมาณมากสำหรับนามนับไม่ได้อย่าง 'much' (much money) มีกฎเหล็กว่าต้องเดินเกมคู่กับ SO เท่านั้น",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> ห้ามวิเคราะห์ตื้นๆ ว่าเงิน (money) คือคำนามแล้วเลือกใช้ such เพราะตัวระบุปริมาณอย่าง much จะบังคับสั่งการให้ล็อกผลไปที่ SO"
+    rightReason: "เฉลยตอบ <strong>so</strong> เนื่องจากเจอคำบอกปริมาณนามนับไม่ได้คือคำว่า 'much' (much money) ซึ่งไวยากรณ์บังคับจับคู่เป็นคำว่า so much เท่านั้น",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ห้ามเลือกตอบ such เพียงเพราะเห็นเงิน (money) เป็นคำนาม เนื่องจากคำระบุปริมาณด้านหน้าจะทำหน้าที่คุมกฎข้อนี้แทน"
   },
   {
     q: "10. The defender's positioning was ______ poor that it cost the team a crucial goal.",
     opts: ["A) such", "B) too", "C) so", "D) very"],
     ans: 2,
-    rightReason: "ใช้ <strong>so</strong> เพื่อเข้าคู่ขยายคำคุณศัพท์แย่ 'poor' เพื่อบอกว่าตำแหน่งการยืนของกองหลังแย่มากจนส่งผลร้ายให้ทีมเสียประตู",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> อย่าไขว้เขวกับประธานส่วนหน้าตัวยาวๆ สิ่งที่อยู่ติดกับช่องว่างคือ poor ซึ่งเป็นคำคุณศัพท์โดดๆ หลัง Verb to be ไม่มีนามตามท้าย จึงต้องจับคู่กับ SO"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะขยายคำคุณศัพท์แย่ 'poor' ที่วางตัวอยู่โดดๆ ข้างหลังกริยา Verb to be เพื่อระบุว่าตำแหน่งยืนของกองหลังแย่มากจนส่งผลให้เสียประตู",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> โครงสร้างข้อนี้ไม่มีคำนามมาปิดท้ายประโยคส่วนแรก จึงตัดช้อยส์ตัวเลือก such ออกไปได้ทันทีตั้งแต่แรกเห็น"
   },
   {
     q: "11. He is ______ a talented goalkeeper that national teams are trying to recruit him.",
     opts: ["A) so", "B) such", "C) highly", "D) exceptional"],
     ans: 1,
-    rightReason: "ใช้ <strong>such</strong> เพราะวางตําแหน่งอยู่หน้ากลุ่มคำ 'a talented goalkeeper' ซึ่งระบุตัวตนบุคคลชัดเจนว่าเป็นผู้รักษาประตูที่พรสวรรค์สูง",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> โครงสร้างที่มีอาร์ติเคิล 'a' มาปักหมุดหลังช่องว่างทันทีแบบนี้ คือสัญลักษณ์คำเตือนตัวโตๆ ว่าตัวเลือกเดียวในใจคือ SUCH"
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะตั้งอยู่ด้านหน้ากลุ่มวลีคำนามระบุบุคคลเอกพจน์ชัดเจนคือคำว่า 'a talented goalkeeper' (ผู้รักษาประตูผู้มีพรสวรรค์)",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> การสังเกตเห็นตัวเอ (a) วางอยู่ตรงหลังช่องว่างทันที เป็นหลักฐานชั้นดีว่าคำตอบเดียวที่เป็นไปได้ตามระบบไวยากรณ์คือ such"
   },
   {
     q: "12. The training session was ______ rigorous that several players suffered muscle cramps.",
     opts: ["A) so", "B) such", "C) much", "D) too"],
     ans: 0,
-    rightReason: "ใช้ <strong>so</strong> เพราะคำว่า 'rigorous' แปลว่าเข้มงวด/หนักหน่วง ทำหน้าที่เป็น Adjective ขยายประธานโดยไม่มีคำนามใดตามหลัง",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> ถ้าเลือกใช้ too แม้จะแปลความหมายได้ แต่โครงสร้าง too จะจับคู่ขยายรูปประโยคแบบสั้น (Too...to + verb) ไม่ใช่การเชื่อมอนุประโยคด้วยคำว่า that ในส่วนหลัง"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะคำว่า 'rigorous' แปลว่าเข้มงวดหนักหน่วง ทำหน้าที่เป็นคำคุณศัพท์เดี่ยวๆ ขยายช่วงเวลาฝึกซ้อมโดยไม่มีนามค้ำท้าย",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ถ้าผู้เรียนเลือกตอบ too แม้แปลในใจว่ามากเกินไปจะพอได้ใจความ แต่โครงสร้างของ too จะเชื่อมด้วยคำว่า to + กริยา ไม่ใช่เชื่อมด้วยประโยคที่มีคำว่า that"
   },
   {
     q: "13. The stadium has ______ few exits that it takes an hour for everyone to leave.",
     opts: ["A) such", "B) so", "C) very", "D) critical"],
     ans: 1,
-    rightReason: "ใช้ <strong>so</strong> ตามข้อตกลงพิเศษเมื่อเข้าคู่กับคำบอกปริมาณน้อยสำหรับนามนับได้พหูพจน์ 'few' (few exits)",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> แม้จะเห็นทางออก 'exits' เป็นคำนามพหูพจน์เด่นชัด แต่ถ้าโดนบล็อกหน้าด้วยคำว่า few อำนาจการเชื่อมประโยคบอกผลลัพธ์จะตกเป็นของ SO ทันที"
+    rightReason: "เฉลยตอบ <strong>so</strong> ตามกฎเฉพาะทางของคำบอกปริมาณน้อยสำหรับคำนามนับได้พหูพจน์คือคำว่า 'few' บังคับจับคู่สำเร็จรูปเป็น so few",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ถึงแม้ด้านหลังสุดจะเป็นทางออก 'exits' ที่เป็นคำนามพหูพจน์ แต่เมื่อถูกบังคับตำแหน่งด้วยคำว่า few ด้านหน้า คำเชื่อมบอกผลต้องเป็น so ทันที"
   },
   {
     q: "14. It was ______ a brilliant counter-attack that the opposition had no time to recover.",
-    opts: ["A) such", "B) much", "C) such", "D) completely"],
-    ans: 2,
-    rightReason: "ใช้ <strong>such</strong> วางหน้าคำนามกลุ่มเด่นชัดที่แปลว่าการสวนกลับเร็วอันยอดเยี่ยม 'a brilliant counter-attack'",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> อย่าโดนหลอกคิดว่า counter-attack เป็นกริยา ในบริบทนี้มันทำหน้าที่เป็นคำนามหลัก (สังเกตง่ายๆ จากที่มีอาร์ติเคิล a นำหน้า) จึงต้องใช้ SUCH"
+    opts: ["A) so", "B) such", "C) much", "D) too"],
+    ans: 1,
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะวางอยู่ด้านหน้ากลุ่มวลีคำนามนับได้เอกพจน์ระบุการกระทำคือ 'a brilliant counter-attack' (การสวนกลับที่ยอดเยี่ยม)",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> คำว่า counter-attack ในบริบทข้อนี้ทำหน้าที่เป็นคำนามหลักของกลุ่มคำสังเกตได้จากมีตัวเอ (a) นำหน้า จึงห้ามใช้คำว่า so ขยายเด็ดขาด"
   },
   {
     q: "15. The weather conditions were ______ terrible that the referee postponed the match.",
     opts: ["A) such", "B) so", "C) very", "D) total"],
     ans: 1,
-    rightReason: "ใช้ <strong>so</strong> ขยายคุณศัพท์บอกสภาพอากาศที่เลวร้าย 'terrible' เพื่อโยงเหตุการณ์ไปยังการสั่งเลื่อนการแข่งขันของผู้ตัดสิน",
-    wrongAnalysis: "<strong>วิธีแก้จุดผิดพลาด:</strong> หากคุณเลือกใช้ such ประโยคจะขาดโครงสร้างคำนามรองรับทันทีเนื่องจากหลังคำว่า terrible สิ้นสุดประโยคย่อยส่วนแรกแล้วเชื่อมคำว่า that ทันที"
+    rightReason: "เฉลยตอบ <strong>so</strong> เพื่อทำหน้าที่ขยายคำคุณศัพท์บอกสภาพอากาศที่เลวร้าย 'terrible' เพื่อส่งประโยคไปหาเหตุการณ์ที่กรรมการสั่งเลื่อนการแข่ง",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> หากคุณกาเลือกคำว่า such ประโยคจะผิดหลักไวยากรณ์ทันทีเนื่องจากข้างหลังไม่มีโครงสร้างคำนามมารองรับก่อนถึงคำเชื่อมคำว่า that"
+  },
+  {
+    q: "16. The new stadium seats are ______ comfortable that many fans fell asleep during halftime.",
+    opts: ["A) such", "B) so", "C) highly", "D) too"],
+    ans: 1,
+    rightReason: "เฉลยตอบ <strong>so</strong> เนื่องจากคำว่า comfortable เป็นคำคุณศัพท์บอกความสบายใจที่วางตัวลำพังหลังกริยาหลักทำหน้าที่ขยายประธานเก้าอี้ที่นั่ง",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ห้ามเลือกตอบ highly หรือ such เพราะระบบการโยงประโยคเพื่อสรุปแจ้งผลลัพธ์ด้วยคำเชื่อมว่า that จะบังคับจับคู่กับ SO เท่านั้น"
+  },
+  {
+    q: "17. It was ______ magnificent teamwork that the coach rewarded the players with a day off.",
+    opts: ["A) so", "B) such", "C) very", "D) a such"],
+    ans: 1,
+    rightReason: "เฉลยตอบ <strong>such</strong> เนื่องจากคำว่าการทำงานเป็นทีม 'teamwork' จัดเป็นคำนามนับไม่ได้ จึงสามารถวาง such นำหน้าคำคุณศัพท์ได้เลยโดยไม่ต้องใส่ตัวอักษรนำหน้า (a/an)",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ตัวเลือกข้อ D (a such) เป็นรูปสลับตำแหน่งที่ไม่มีอยู่จริงในภาษาอังกฤษ และห้ามเผลอเติมใส่อาร์ติเคิลเอกพจน์กับนามนับไม่ได้"
+  },
+  {
+    q: "18. The forward ran ______ fast that the cameras struggled to keep him in focus.",
+    opts: ["A) such", "B) too", "C) so", "D) extremely"],
+    ans: 2,
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะคำว่า fast ในที่นี้ทำหน้าที่ขยายลักษณะการวิ่ง (ran) เป็นคำกริยาวิเศษณ์เดี่ยวๆ โครงสร้างบอกผลลัพธ์คือใช้ so...that",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ถึงแม้ extremely จะแปลว่ามากอย่างยิ่ง แต่ไม่สามารถนำมาใช้จับคู่สร้างรูปประโยคบอกผลสรุปคู่กับคำเชื่อมว่า that ในจุดนี้ได้"
+  },
+  {
+    q: "19. The club has faced ______ many financial problems that they might face relegation.",
+    opts: ["A) such", "B) very", "C) too", "D) so"],
+    ans: 3,
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะเข้าเงื่อนไขข้อยกเว้นพิเศษ เมื่อเจอคำบอกจำนวนมากพหูพจน์อย่างคำว่า 'many' ต้องเดินเกมคู่กับคำว่า so เสมอ",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ข้อนี้ตั้งใจลวงตาผู้เรียนด้วยคำนามพหูพจน์ปัญหาทางการเงิน (financial problems) แต่จำไว้ว่าเมื่อมีคำว่า many สิทธิ์ขาดจะเป็นของ SO"
+  },
+  {
+    q: "20. The manager gave ______ clear instructions that none of the squad players got confused.",
+    opts: ["A) so", "B) such", "C) such a", "D) very"],
+    ans: 1,
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะคำหลักด้านหลังช่องว่างคือคำสั่ง 'instructions' ซึ่งเป็นคำนามรูปพหูพจน์ที่เติม s วางอยู่หลังคำคุณศัพท์ clear",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ข้อ C (such a) ผิดทันทีเพราะห้ามนำคำระบุจำนวนเอกพจน์อย่างตัวเอ (a) ไปใช้นำหน้าคำนามพหูพจน์ที่บ่งบอกว่ามีหลายจำนวน"
+  },
+  {
+    q: "21. The ticket prices were ______ expensive that the lower tier was completely empty.",
+    opts: ["A) such", "B) too", "C) so", "D) much"],
+    ans: 2,
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะคำว่า expensive ทำหน้าที่เป็นคำคุณศัพท์บอกความแพงที่อยู่ติดกับคำเชื่อมเชื่อมความว่า that จึงตรงตามสูตรสำเร็จ so + Adjective",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> คำว่า too จะไม่มีวันจับคู่วางโครงสร้างร่วมกับคำเชื่อมคำว่า that เพื่อบอกประโยคผลลัพธ์ยื่นยาวด้านหลัง"
+  },
+  {
+    q: "22. The goalkeeper made ______ a terrible blunder that he was benched for the next match.",
+    opts: ["A) so", "B) such", "C) total", "D) highly"],
+    ans: 1,
+    rightReason: "เฉลยตอบ <strong>such</strong> เพราะกลุ่มวลีคำนามด้านหลังคือ 'a terrible blunder' (ความผิดพลาดที่ร้ายแรงมาก) ซึ่งเริ่มกลุ่มคำด้วยอาร์ติเคิลเอกพจน์",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> สังเกตเห็นจุดจดจำง่ายๆ หากมีตัวเอ (a) นำหน้าขนาบข้างอยู่หลังช่องว่างแบบนี้ ให้พุ่งเป้าไปที่การเลือกกาตัวเลือก such ได้ทันที"
+  },
+  {
+    q: "23. The midfielder has ______ much vision that he can spot openings before they happen.",
+    opts: ["A) so", "B) such", "C) real", "D) plenty"],
+    ans: 0,
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะเข้าเกณฑ์การระบุปริมาณคำนามนับไม่ได้คือคำว่า 'much' (much vision) บังคับสิทธิ์ขาดให้ล็อกเป้าตอบไปที่คำว่า so เท่านั้น",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ห้ามหลงกลเลือกตอบ such เพียงเห็นว่าวิสัยทัศน์ (vision) คือคำนามเดี่ยวๆ เพราะกฎระบุปริมาณด้านหน้าจะเข้ามาควบคุมแทนทั้งหมด"
+  },
+  {
+    q: "24. They played ______ an aggressive game that the referee handed out five yellow cards.",
+    opts: ["A) so", "B) such a", "C) such an", "D) too"],
+    ans: 2,
+    rightReason: "เฉลยตอบ <strong>such an</strong> ตามสูตรกลุ่มคำนามนับได้เอกพจน์ โดยคำว่า aggressive ออกเสียงพยางค์แรกขึ้นต้นเป็นเสียงสระ (เสียง อ.) จึงต้องแปลงร่างมาใช้คู่กับคำว่า an",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ข้อ B (such a) ผิดหลักเรื่องความสอดคล้องของอักษรนำหน้าเพราะคำว่า aggressive ห้ามนำหน้าด้วยคำระบุเสียงพยัญชนะอย่างตัว a"
+  },
+  {
+    q: "25. The defender tackled the opponent ______ clumsily that a penalty was instantly awarded.",
+    opts: ["A) so", "B) such", "C) very", "D) real"],
+    ans: 0,
+    rightReason: "เฉลยตอบ <strong>so</strong> เพราะคำว่า clumsily ลงท้ายด้วยสระเสียงลี่ (-ly) ทำหน้าที่เป็นคำกริยาวิเศษณ์บอกอาการสกัดบอลอย่างซุ่มซ่าม ขยายคำวิเศษณ์เพียวๆ ต้องเลือกใช้ so",
+    wrongAnalysis: "<strong>ทำไมข้ออื่นผิด:</strong> ในทางไวยากรณ์จะไม่มีการนำเอาคำเชื่อมจำพวก such มาใช้วางตั้งตระหง่านอยู่หน้าคำกริยาวิเศษณ์ที่ตั้งอยู่เดี่ยวๆ ปราศจากคำนาม"
   }
 ];
 
@@ -545,7 +651,7 @@ let currentScore = 0;
 
 function setupLeagueQuestion() {
   const data = championshipQuizDB[currentIndex];
-  document.getElementById('quiz-title-indicator').innerText = `MATCH ${currentIndex + 1} OF ${championshipQuizDB.length}`;
+  document.getElementById('quiz-title-indicator').innerText = `นัดแข่งขันที่ ${currentIndex + 1} จาก ${championshipQuizDB.length}`;
   document.getElementById('quiz-question-text').innerText = data.q;
   
   const fillingPct = ((currentIndex + 1) / championshipQuizDB.length) * 100;
@@ -558,12 +664,12 @@ function setupLeagueQuestion() {
     const btn = document.createElement('button');
     btn.className = "option-btn";
     btn.innerText = optionText;
-    btn.onclick = () => checkLeagueAnswer(optIdx);
+    btn.onclick = function() { checkLeagueAnswer(optIdx); };
     optionsBox.appendChild(btn);
   });
   
-  document.getElementById('verdict-box').className = "panel-referee";
-  document.getElementById('verdict-box').style.display = "none";
+  const verdictPanel = document.getElementById('verdict-box');
+  verdictPanel.style.setProperty('display', 'none', 'important');
   document.getElementById('next-match-btn').style.display = "none";
 }
 
@@ -574,26 +680,27 @@ function checkLeagueAnswer(userChoice) {
   
   allBtns.forEach(btn => btn.disabled = true);
   
-  if (userChoice === data.ans) {
+  if (parseInt(userChoice) === data.ans) {
     allBtns[userChoice].classList.add('correct-state');
     verdictPanel.innerHTML = `
-      <div class="title-verdict">🎯 VAR Decision: GOAL! (ยิงประตูถูกต้อง)</div>
-      <p>${data.rightReason}</p>
+      <div class="title-verdict">🎯 ผลการตรวจสอบจากห้อง VAR: ยิงประตูถูกต้อง!</div>
+      <p><strong>คำอธิบายเหตุผล:</strong> ${data.rightReason}</p>
     `;
-    verdictPanel.className = "panel-referee pos-verdict active-show";
+    verdictPanel.className = "panel-referee pos-verdict";
     currentScore++;
-    document.getElementById('quiz-live-score-text').innerText = `SCORE: ${currentScore}/${championshipQuizDB.length}`;
+    document.getElementById('quiz-live-score-text').innerText = `คะแนนของคุณตอนนี้: ${currentScore}/${championshipQuizDB.length}`;
   } else {
     allBtns[userChoice].classList.add('wrong-state');
     allBtns[data.ans].classList.add('correct-state');
     verdictPanel.innerHTML = `
-      <div class="title-verdict"><span class="sticker-card-ref card-red"></span> Referee Verdict: FOUL! (โดนใบแดงสกัดฟาวล์)</div>
-      <p style="margin-bottom: 8px;"><strong>คำเฉลยวิเคราะห์ที่ถูก:</strong> ${data.rightReason}</p>
-      <p style="border-top: 1px dashed rgba(219,0,7,0.3); padding-top: 6px;">${data.wrongAnalysis}</p>
+      <div class="title-verdict"><span class="sticker-card-ref card-red"></span> คำตัดสินของผู้ตัดสิน: ทำฟาวล์ โดนใบแดง!</div>
+      <p style="margin-bottom: 8px;"><strong>คำเฉลยวิเคราะห์ที่ถูกต้อง:</strong> ${data.rightReason}</p>
+      <p style="border-top: 2px dashed #f87171; padding-top: 8px; margin-top: 8px;"><strong>จุดวิเคราะห์ความผิดพลาดเมื่อเลือกช้อยส์นี้:</strong> ${data.wrongAnalysis}</p>
     `;
-    verdictPanel.className = "panel-referee neg-verdict active-show";
+    verdictPanel.className = "panel-referee neg-verdict";
   }
   
+  verdictPanel.style.setProperty('display', 'block', 'important');
   document.getElementById('next-match-btn').style.display = "block";
 }
 
@@ -604,14 +711,14 @@ function advanceToNextMatch() {
   } else {
     const arenaBox = document.getElementById('quiz-arena');
     arenaBox.innerHTML = `
-      <div style="text-align:center; padding: 24px 0;">
-        <h3 style="color:var(--mu-gold); font-size:24px; font-weight:800;">🏆 CHAMPIONS ถ้วยรางวัลโอลด์แทรฟฟอร์ด</h3>
-        <p style="color:var(--text-muted); font-size:13px; margin: 4px 0 24px;">สถิติทำคะแนนรวมถ้วยรางวัลไวยากรณ์ของคุณในฤดูกาลนี้</p>
-        <div style="font-size:58px; font-weight:800; color:#fff; margin-bottom:24px; text-shadow: 0 0 20px rgba(219,0,7,0.4);">${currentScore} / ${championshipQuizDB.length}</div>
-        <button class="option-btn" style="text-align:center; background:var(--mu-red); color:#fff; font-weight:800; border:1px solid var(--mu-gold); padding:14px; border-radius:30px;" onclick="restartChampionshipLeague()">ลงสนามนัดแก้ตัวแก้แก้มือใหม่ 🔄</button>
+      <div style="text-align:center; padding: 30px 0;">
+        <h3 style="color:var(--mu-gold); font-size:28px; font-weight:800;">🏆 จบฤดูกาลทดสอบถ้วยรางวัลไวยากรณ์</h3>
+        <p style="color:var(--text-muted); font-size:18px; margin: 8px 0 24px; font-weight:600;">สรุปสถิติจำนวนประตูรวมที่คุณสามารถทำได้ในฤดูกาลแข่งขันนี้</p>
+        <div style="font-size:64px; font-weight:800; color:var(--mu-red); margin-bottom:24px;">${currentScore} / ${championshipQuizDB.length} คะแนน</div>
+        <button class="option-btn" style="text-align:center; background:var(--mu-red); color:#fff; font-weight:800; border:2px solid var(--mu-gold); padding:16px; border-radius:35px; font-size:18px;" onclick="restartChampionshipLeague()">ลงสนามนัดแก้ตัวใหม่อีกครั้ง 🔄</button>
       </div>
     `;
-    document.getElementById('verdict-box').style.display = "none";
+    document.getElementById('verdict-box').style.setProperty('display', 'none', 'important');
     document.getElementById('next-match-btn').style.display = "none";
   }
 }
@@ -619,10 +726,10 @@ function advanceToNextMatch() {
 function restartChampionshipLeague() {
   currentIndex = 0;
   currentScore = 0;
-  document.getElementById('quiz-live-score-text').innerText = `SCORE: 0/15`;
+  document.getElementById('quiz-live-score-text').innerText = `คะแนนของคุณตอนนี้: 0/25`;
   const arenaBox = document.getElementById('quiz-arena');
   arenaBox.innerHTML = `
-    <h3 class="question-title" id="quiz-question-text">Loading match data...</h3>
+    <h3 class="question-title" id="quiz-question-text">กำลังโหลดโจทย์ข้อสอบ...</h3>
     <div id="quiz-options-box"></div>
   `;
   setupLeagueQuestion();
